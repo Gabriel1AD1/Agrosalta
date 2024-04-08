@@ -72,7 +72,7 @@ const userInformacionSchema  = {
 class UserInformacion extends Model{
   // crear metodos estaticos
   static associate(models){
-
+    
     this.hasOne(models.userWeb,{
         as: 'userWeb',
         foreignKey: "id",
