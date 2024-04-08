@@ -8,6 +8,10 @@ const {ClienteVehiculo, clienteVehiculoSchema}= require('./cliente-vehiculo.mode
 const {ServicioValor, ServicioValorSchema}= require('./servicio-valor.model');
 const {operacionSchema, Operacion}= require('./operaciones.model');
 const {Movimiento, movimientoSchema}= require('./movimiento.model');
+const { UserWeb, userWebSchema, } = require('./AutoGestionable/userWeb.model');
+const { UserInformation, userInformationSchema } = require('./AutoGestionable/userWebInformacion.model');
+const { VehiculoWeb, vehiculoWebSchema } = require('./AutoGestionable/vehiculoWeb.model');
+const { ClienteVehiculoWeb, clienteVehiculoWebSchema } = require('./AutoGestionable/cliente-vehiculo.model');
 
 function setupModels(sequelize){
 
@@ -22,7 +26,10 @@ Operacion.init(operacionSchema,Operacion.config(sequelize));
 Movimiento.init(movimientoSchema,Movimiento.config(sequelize));
 
 //CLIENTE WEB
-
+UserWeb.init(userWebSchema, UserWeb.config(sequelize));
+UserInformation.init(userInformationSchema , UserInformation.config(sequelize))
+VehiculoWeb.init(vehiculoWebSchema , VehiculoWeb.config(sequelize));
+ClienteVehiculoWeb.init(clienteVehiculoWebSchema,ClienteVehiculoWeb.config(sequelize));
 
 
 Cliente.associate(sequelize.models);
