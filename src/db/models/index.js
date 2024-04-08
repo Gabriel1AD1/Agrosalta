@@ -21,6 +21,8 @@ ServicioValor.init(ServicioValorSchema,ServicioValor.config(sequelize));
 Operacion.init(operacionSchema,Operacion.config(sequelize));
 Movimiento.init(movimientoSchema,Movimiento.config(sequelize));
 
+//CLIENTE WEB
+
 
 
 Cliente.associate(sequelize.models);
