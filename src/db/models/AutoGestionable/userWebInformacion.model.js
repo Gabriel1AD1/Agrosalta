@@ -2,7 +2,7 @@
 const {Model,DataTypes, Sequelize} = require('sequelize');
 
 const USERINFORMATION_TABLE = 'userInformation';
-const userInformacionSchema  = {
+const userInformationSchema  = {
   id: {
     allowNull: false,
     autoIncrement: true,
@@ -69,7 +69,7 @@ const userInformacionSchema  = {
   }
 }
  
-class UserInformacion extends Model{
+class UserInformation extends Model{
   // crear metodos estaticos
   static associate(models){
     
@@ -92,6 +92,6 @@ class UserInformacion extends Model{
 }
 module.exports = {
   USERINFORMATION_TABLE,
-  userInformacionSchema,
-  UserInformacion
+  userInformationSchema,
+  UserInformation
 }
